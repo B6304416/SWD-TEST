@@ -19,15 +19,15 @@ const FormComponent: React.FC<FormComponentProps> = ({ initialValues, onSubmit }
     const [form] = Form.useForm();
     const dispatch = useDispatch();
     const { t } = useTranslation();
-    console.log(initialValues);
+    // console.log(initialValues);
 
     useEffect(() => {
-        // Update form values when initialValues change
+      
         if (initialValues) {
-          // Ensure date fields are properly formatted
+        
           const initialValuesFormatted = {
             ...initialValues,
-            birthday: initialValues.birthday ? moment(initialValues.birthday) : null, // Parse 'birthday' field as a moment object
+            birthday: initialValues.birthday ? moment(initialValues.birthday) : null, 
           };
           form.setFieldsValue(initialValuesFormatted);
         }
