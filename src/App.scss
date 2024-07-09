@@ -1,0 +1,154 @@
+.app-layout {
+  min-height: 100vh;
+  background: linear-gradient(to right, #6eda78, #ffa200);
+  position: relative;
+
+  .app-content {
+    display: flex;
+    flex-direction: column;
+  }
+}
+.app-header {
+  display: flex;
+  justify-content: end;
+  background: transparent;
+  padding: 10px;
+  position: absolute;
+  top: 0;
+  right: 0;
+  left: 0;
+  z-index: 1;
+}
+
+.app-card {
+    cursor: pointer;
+    width: 250px;
+}
+
+
+
+.Test1 {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 10px;
+  width: 60%;
+  margin: 0 auto;
+}
+
+h1 {
+  color: black;
+  margin: 0 0 30px 10px;
+}
+
+.buttons.head {
+  grid-template-columns: repeat(3, 1fr);
+  margin-bottom: 30px;
+}
+.buttons.end {
+  grid-template-columns: repeat(3, 1fr);
+  width: 75%;
+}
+
+.buttons {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr); /* สร้างคอลัมน์ทั้งหมด 4 */
+  gap: 20px;
+  margin-bottom: 10px;
+  width: 100%;
+
+  .button {
+    cursor: pointer;
+  }
+  .button:hover {
+    background-color: orange;
+  }
+}
+
+.shapes-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 20px;
+  transition: transform 0.5s;
+
+  &.flipped {
+    transform: rotateX(180deg);
+  }
+}
+.shape-card.col {
+  width: 430px;
+  display: flex;
+  align-items: center;
+
+  .col {
+    display: flex;
+    justify-content: space-between;
+  }
+  .ant-card-body {
+    width: 100%; /* ทำให้เนื้อหาภายในการ์ดเต็มพื้นที่ */
+  }
+}
+.shape-card:hover {
+  background-color: orange;
+  .shape,
+  .shape2,
+  .shape-oval {
+    background: white;
+  }
+}
+
+.shape-card {
+  width: 200px;
+  height: 100px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+
+  .b-shape {
+    width: 60px;
+    height: 60px;
+    background: grey;
+    margin-bottom: 10px;
+  }
+  .shape {
+    width: 80px;
+    height: 80px;
+    background: grey;
+    transition: transform 0.5s;
+  }
+  .shape2 {
+    width: 120px;
+    height: 80px;
+    background: grey;
+    transition: transform 0.5s;
+  }
+  .shape-oval {
+    width: 120px;
+    height: 120px;
+    background: grey;
+    transition: transform 0.5s;
+  }
+
+  .triangle {
+    clip-path: polygon(50% 0%, 0% 100%, 100% 100%);
+  }
+  .trapezoid {
+    clip-path: polygon(20% 0%, 80% 0%, 100% 100%, 0% 100%);
+  }
+  .rectangle {
+    clip-path: polygon(0% 0%, 100% 0%, 100% 100%, 0% 100%);
+  }
+  .parallelogram {
+    clip-path: polygon(25% 0%, 100% 0%, 75% 100%, 0% 100%);
+  }
+  .square {
+    clip-path: polygon(0% 0%, 100% 0%, 100% 100%, 0% 100%);
+  }
+  .circle {
+    clip-path: circle(50% at 50% 50%);
+  }
+  .oval {
+    clip-path: ellipse(40% 25% at 50% 50%);
+  }
+}
